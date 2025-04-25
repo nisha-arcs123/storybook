@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/angular';
 import { InputsComponent } from './inputs.component';
 
 const meta: Meta<InputsComponent> = {
-  title: 'Testing/Inputs',
+  title: 'Testing/Input',
   component: InputsComponent,
   tags: ['autodocs'],
   parameters: {
@@ -23,21 +23,36 @@ type Story = StoryObj<InputsComponent>;
 
 export const Input: Story = {
   args: {
-    label: 'Input',
+    label: 'Inputs',
     inputClass: 'input',
   },
 };
 
-// export const Label: Story = {
-//   args: {
-//     label: 'Label Input',
-//     inputClass: 'label',
-//   },
-// };
 
-// export const Login: Story = {
-//   args: {
-//     label: 'Login Input',
-//     inputClass: 'login',
-//   },
-// };
+export const Select: Story = {
+  args: {
+    label: 'Select Box',
+    inputClass: 'select',
+  },
+};
+
+export const Validation: Story = {
+  args: {
+    label: 'Validation',
+    inputClass: 'validation',
+  },
+};
+
+export const Search: Story = {
+  args: {
+    label: 'Search',
+    inputClass: 'search',
+  },
+};
+
+export const Uploads: Story = {
+  args: {
+    label: 'Upload',
+    inputClass: 'upload',
+  },
+};

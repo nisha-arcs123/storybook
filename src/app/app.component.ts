@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { InputsComponent } from "./inputs/inputs.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [ InputsComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'storybook';
+
+  test() {
+    console.log("test");
+    
+  }
 }
