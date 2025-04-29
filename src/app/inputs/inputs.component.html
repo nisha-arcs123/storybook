@@ -10,42 +10,48 @@
         into. They typically appear in forms and dialogs.
       </p>
       <div class="input-container default">
-        <app-input-sizes
-          [label]="'very small'"
-          [inputClass]="'very-small'"
-          [borderRadius]="4"
-          [height]="28"
-        ></app-input-sizes>
-        <app-input-sizes
-          [label]="'Small'"
-          [inputClass]="'small'"
-          [borderRadius]="4"
-          [height]="32"
-        ></app-input-sizes>
-        <app-input-sizes
-          [label]="'Medium'"
-          [inputClass]="'medium'"
-          [borderRadius]="4"
-          [height]="38"
-        ></app-input-sizes>
-        <app-input-sizes
-          [label]="'Large'"
-          [inputClass]="'large'"
-          [borderRadius]="4"
-          [height]="42"
-        ></app-input-sizes>
-        <app-input-sizes
-          [label]="'Extra Large'"
-          [inputClass]="'extra-large'"
-          [borderRadius]="4"
-          [height]="48"
-        ></app-input-sizes>
-        <app-input-sizes
-          [label]="'Double Extra Large'"
-          [inputClass]="'xxl'"
-          [borderRadius]="4"
-          [height]="54"
-        ></app-input-sizes>
+          <input
+            type="text"
+            class="very-small"
+            [placeholder]="label"
+            [ngStyle]="{ 'background-color': backgroundColor }"
+            (click)="onClick.emit($event)"
+          />
+          <input
+            type="text"
+            class="small"
+            [placeholder]="label"
+            [ngStyle]="{ 'background-color': backgroundColor }"
+            (click)="onClick.emit($event)"
+          />
+          <input
+            type="text"
+            class="medium"
+            [placeholder]="label"
+            [ngStyle]="{ 'background-color': backgroundColor }"
+            (click)="onClick.emit($event)"
+          />
+          <input
+            type="text"
+            class="large"
+            [placeholder]="label"
+            [ngStyle]="{ 'background-color': backgroundColor }"
+            (click)="onClick.emit($event)"
+          />
+          <input
+            type="text"
+            class="extra-large"
+            [placeholder]="label"
+            [ngStyle]="{ 'background-color': backgroundColor }"
+            (click)="onClick.emit($event)"
+          />
+          <input
+            type="text"
+            class="xxl"
+            [placeholder]="label"
+            [ngStyle]="{ 'background-color': backgroundColor }"
+            (click)="onClick.emit($event)"
+          />
       </div>
     </div>
 
@@ -808,5 +814,3 @@
     </div>
   </div>
 </div>
-
-

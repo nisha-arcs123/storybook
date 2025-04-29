@@ -1,29 +1,25 @@
-import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'app-form',
+  selector: 'app-forms',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule],
   templateUrl: './forms.component.html',
-  styleUrl: './forms.component.scss'
+  styleUrls: ['./forms.component.scss']
 })
-export class FormComponent {
-  form: FormGroup;
+export class FormsComponent {
+  /** Placeholder text */
+  @Input() label = 'Type something...';
 
-  constructor(private fb: FormBuilder) {
-    this.form = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', [Validators.required, Validators.email]],
-    });
-  }
+  /** Input size classes */
+  @Input() inputClass: 'simple-input' | 'label-input' | 'with-icon' = 'simple-input';
 
-  submit() {
-    if (this.form.valid) {
-      console.log('Form Submitted:', this.form.value);
-    } else {
-      console.log('Form Invalid');
-    }
-  }
+  // @Input() borderRadius ?: number=4;
+  // @Input() height ?: number = 28;
+  // /** Optional background color */
+  // @Input() backgroundColor?: string;
+
+
+  /** Output event when clicked */
 }

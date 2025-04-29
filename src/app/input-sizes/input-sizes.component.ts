@@ -1,11 +1,10 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, Output, EventEmitter } from '@angular/core';
-import { FormComponent } from "../forms/forms.component";
 
 @Component({
   selector: 'app-input-sizes',
   standalone: true,
-  imports: [CommonModule, FormComponent],
+  imports: [CommonModule],
   templateUrl: './input-sizes.component.html',
   styleUrls: ['./input-sizes.component.scss']
 })
